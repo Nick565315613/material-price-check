@@ -1,0 +1,9 @@
+table.main-data {
+  border: 1px solid green;
+  border-collapse: collapse;
+}
+
+table.main-data td,
+table.main-data th {
+  padding: 4px 8px;
+}
