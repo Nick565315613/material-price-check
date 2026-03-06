@@ -4,7 +4,7 @@ const materials = ["CLOTH", "LEATHER", "METALBAR", "PLANKS"];
 // Replicates the Go generateApiURL function
 function generateApiURL(material) {
   return (
-    "https://west.albion-online-data.com/api/v2/stats/prices/" +
+    "https://europe.albion-online-data.com/api/v2/stats/prices/" +
     `T4_${material},T4_${material}_LEVEL1@1,T4_${material}_LEVEL2@2,T4_${material}_LEVEL3@3,T4_${material}_LEVEL4@4,` +
     `T5_${material},T5_${material}_LEVEL1@1,T5_${material}_LEVEL2@2,T5_${material}_LEVEL3@3,T5_${material}_LEVEL4@4,` +
     `T6_${material},T6_${material}_LEVEL1@1,T6_${material}_LEVEL2@2,T6_${material}_LEVEL3@3,T6_${material}_LEVEL4@4,` +
