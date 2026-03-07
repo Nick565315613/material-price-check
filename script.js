@@ -149,3 +149,34 @@ function addTableRow(name, tier, enchant, priceData) {
   table.appendChild(row);
 }
 
+
+function copyTable() {
+  const table = document.querySelector(".main-data");
+  if (!table) return;
+
+  const rows = table.querySelectorAll("tr");
+  let result = [];
+
+  rows.forEach((row, rowIndex) => {
+    // Skip header row
+    if (rowIndex === 0) return;
+
+    const cells = row.querySelectorAll("td, th");
+    let rowData = [];
+
+    cells.forEach((cell, colIndex) => {
+      // Skip first two columns
+      if (colIndex < 3) return;
+
+      rowData.push(cell.innerText.trim());
+    });
+
+    if (rowData.length) result.push(rowData.join("\t"));
+  });
+
+  const text = result.join("\n");
+
+  navigator.clipboard.writeText(text).then(() => {
+    console.log("Copied to clipboard");
+  });
+}
