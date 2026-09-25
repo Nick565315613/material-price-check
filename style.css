@@ -1,9 +1,59 @@
-table.main-data {
-  border: 1px solid green;
-  border-collapse: collapse;
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #222;
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
 }
 
-table.main-data td,
+button {
+  font-size: 14px;
+  padding: 6px 14px;
+  margin-right: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e9e9e9;
+}
+
+#status {
+color: #555;
+font-size: 14px;
+}
+
+table.main-data {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+}
+
+table.main-data th,
+table.main-data td {
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  text-align: right;
+}
+
+table.main-data th:nth-child(-n+3),
+table.main-data td:nth-child(-n+3) {
+  text-align: left;
+}
+
 table.main-data th {
-  padding: 4px 8px;
+  background: #f0f0f0;
+  font-weight: 600;
+}
+
+table.main-data tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+table.main-data tbody tr:hover {
+  background: #f0f7ff;
 }
